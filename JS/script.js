@@ -1,7 +1,9 @@
+// Hoisting
 console.log(myName);
 var myName;
 myName = "William";
 
+// Object
 let me = {
   name: "William",
   age: 18,
@@ -12,7 +14,9 @@ let me = {
 
 me.sayHello();
 
+// Array e Chain of responsibility 
 const months = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
 console.log(`Quantidade de meses no ano ${months.length}`);
 const deleted = months.splice(2, 3);
 console.log(deleted);
+

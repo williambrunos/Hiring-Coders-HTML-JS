@@ -61,3 +61,72 @@
   const months = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
   // Herdam da chain of responsibility various of attributes and methods.
   ```
+
+  ## Operadores
+
+  É importante não só armazenar dados, mas também saber como tratá-los.
+
+  ### Aritméticos
+
+  Operadores mais básicos da matemática
+
+  ```JS
+  /*
+    + -> Soma
+    - -> Subtração
+    * -> Produto
+    / -> Divisão
+    % -> Resto de uma divisão inteira
+    ++ -> Incremento
+    -- -> Decremento
+  */
+  ```
+
+  ### Comparação
+
+  Operadores que comparam de forma lógica valores dentro do programa.
+
+  ```JS
+  /*
+    e -> &&
+    ou -> ||
+    não -> !
+    igualdade de valores -> == -> compara valores de objetos
+    igualdade de tipos -> === -> compara valores de objetos e de tipos
+  */
+  ```
+
+  ## Condicionais
+
+  Estruturamos nosso código com condicionais para termos certas execuções apenas
+  quando certa condição for verdadeira.
+
+  ```JS
+  /*
+    if(condição) {
+      código 1
+    }else if(condição 2) {
+      código 2
+    }else {
+      código 3
+    }
+
+    obs: checar valores truthy e falsy
+  */
+  ```
+
+  Podemos utilizar uma estrutura switch que checa se uma variável assume valores
+  específicos com switch case
+
+  ```JS
+  switch(variable) {
+    case valor_1:
+      // código
+      break;
+    case valor_2:
+      // código
+      break;
+    default:
+      // código de backup
+  }
+  ```
