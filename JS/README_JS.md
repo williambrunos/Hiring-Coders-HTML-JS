@@ -30,3 +30,34 @@
 
   Const possui um **escopo local**, não permite redeclaração, ***não pode ser
   ressignificado***. Precisa ser inicializada logo após sua declaração.
+
+  ## Tipos de dados
+
+  JavaScript possui uma tipagem de dados dinâmica, ou seja: o tipo de suas variáveis
+  são dinâmicas, dependendo do tipo de dado que ela guarda. Assim, podemos modificar
+  o tipo de dado da nossa variável modificando o conteúdo em seu interior.
+
+  ```JS
+  const myName = "William" // String
+  let myAge = 18 // Number -> Integer and Floating Point
+  let isMajor = (myAge >= 18) // Boolean -> true ou false
+  // null -> Um objeto que não existe
+  // undefined -> Um objeto que existe, mas seu valor não foi atribuído
+
+  // Object -> Mapeamento chave:valor -> object = { chave: valor, chave: valor }
+
+  let me = {
+    name: "William",
+    age: 18,
+    sayHello: function() {
+      // This -> Se referencia a um atributo do objeto que chama a função.
+      console.log(`Hello, i'm ${this.name} and i'm ${this.age} years old`);
+    }
+  }
+
+  // Arrays -> Guardam variáveis de tipos dinâmicos em alocação sequencial de
+  // memória
+
+  const months = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
+  // Herdam da chain of responsibility various of attributes and methods.
+  ```
