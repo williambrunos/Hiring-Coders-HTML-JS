@@ -1,148 +1,193 @@
-  ## Variáveis
-  
-  Variáveis são espaços em memória que armazenam certos valores dependendo dos
-  seus tipos. Podemos acessar esses valores e manipulá-los através dos nomes das
-  variáveis.
+## Variáveis
 
-  ### Var
+Variáveis são espaços em memória que armazenam certos valores dependendo dos
+seus tipos. Podemos acessar esses valores e manipulá-los através dos nomes das
+variáveis.
 
-  Define variável de **escopo global**, permite **redeclaração**, e ainda sofre
-  **hoisting**.
+### Var
 
-  ```JS
-  /*
-    var myName;
-    console.log(myName); undefined
-    myName = "William";
+Define variável de **escopo global**, permite **redeclaração**, e ainda sofre
+**hoisting**.
 
-    -> Hoisting
-  */
-  console.log(myName); //undefined
+```JS
+/*
   var myName;
+  console.log(myName); undefined
   myName = "William";
-  ```
 
-  ### let
+  -> Hoisting
+*/
+console.log(myName); //undefined
+var myName;
+myName = "William";
+```
 
-  Let possui um **escopo local**, não permite redeclaração.
+### let
 
-  ### const
+Let possui um **escopo local**, não permite redeclaração.
 
-  Const possui um **escopo local**, não permite redeclaração, ***não pode ser
-  ressignificado***. Precisa ser inicializada logo após sua declaração.
+### const
 
-  ## Tipos de dados
+Const possui um **escopo local**, não permite redeclaração, **_não pode ser
+ressignificado_**. Precisa ser inicializada logo após sua declaração.
 
-  JavaScript possui uma tipagem de dados dinâmica, ou seja: o tipo de suas variáveis
-  são dinâmicas, dependendo do tipo de dado que ela guarda. Assim, podemos modificar
-  o tipo de dado da nossa variável modificando o conteúdo em seu interior.
+## Tipos de dados
 
-  ```JS
-  const myName = "William" // String
-  let myAge = 18 // Number -> Integer and Floating Point
-  let isMajor = (myAge >= 18) // Boolean -> true ou false
-  // null -> Um objeto que não existe
-  // undefined -> Um objeto que existe, mas seu valor não foi atribuído
+JavaScript possui uma tipagem de dados dinâmica, ou seja: o tipo de suas variáveis
+são dinâmicas, dependendo do tipo de dado que ela guarda. Assim, podemos modificar
+o tipo de dado da nossa variável modificando o conteúdo em seu interior.
 
-  // Object -> Mapeamento chave:valor -> object = { chave: valor, chave: valor }
+```JS
+const myName = "William" // String
+let myAge = 18 // Number -> Integer and Floating Point
+let isMajor = (myAge >= 18) // Boolean -> true ou false
+// null -> Um objeto que não existe
+// undefined -> Um objeto que existe, mas seu valor não foi atribuído
 
-  let me = {
-    name: "William",
-    age: 18,
-    sayHello: function() {
-      // This -> Se referencia a um atributo do objeto que chama a função.
-      console.log(`Hello, i'm ${this.name} and i'm ${this.age} years old`);
-    }
+// Object -> Mapeamento chave:valor -> object = { chave: valor, chave: valor }
+
+let me = {
+  name: "William",
+  age: 18,
+  sayHello: function() {
+    // This -> Se referencia a um atributo do objeto que chama a função.
+    console.log(`Hello, i'm ${this.name} and i'm ${this.age} years old`);
+  }
+}
+
+// Arrays -> Guardam variáveis de tipos dinâmicos em alocação sequencial de
+// memória
+
+const months = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
+// Herdam da chain of responsibility various of attributes and methods.
+```
+
+## Operadores
+
+É importante não só armazenar dados, mas também saber como tratá-los.
+
+### Aritméticos
+
+Operadores mais básicos da matemática
+
+```JS
+/*
+  + -> Soma
+  - -> Subtração
+  * -> Produto
+  / -> Divisão
+  % -> Resto de uma divisão inteira
+  ++ -> Incremento
+  -- -> Decremento
+*/
+```
+
+### Comparação
+
+Operadores que comparam de forma lógica valores dentro do programa.
+
+```JS
+/*
+  e -> &&
+  ou -> ||
+  não -> !
+  igualdade de valores -> == -> compara valores de objetos
+  igualdade de tipos -> === -> compara valores de objetos e de tipos
+*/
+```
+
+## Condicionais
+
+Estruturamos nosso código com condicionais para termos certas execuções apenas
+quando certa condição for verdadeira.
+
+```JS
+/*
+  if(condição) {
+    código 1
+  }else if(condição 2) {
+    código 2
+  }else {
+    código 3
   }
 
-  // Arrays -> Guardam variáveis de tipos dinâmicos em alocação sequencial de
-  // memória
+  obs: checar valores truthy e falsy
+*/
+```
 
-  const months = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
-  // Herdam da chain of responsibility various of attributes and methods.
-  ```
+Podemos utilizar uma estrutura switch que checa se uma variável assume valores
+específicos com switch case
 
-  ## Operadores
+```JS
+switch(variable) {
+  case valor_1:
+    // código
+    break;
+  case valor_2:
+    // código
+    break;
+  default:
+    // código de backup
+}
+```
 
-  É importante não só armazenar dados, mas também saber como tratá-los.
+## Estruturas de repetição
 
-  ### Aritméticos
+```JS
+while(condição) {
+  code...
+}
 
-  Operadores mais básicos da matemática
+for(let i = 0; i < value; i++) {
+  code...
+}
 
-  ```JS
-  /*
-    + -> Soma
-    - -> Subtração
-    * -> Produto
-    / -> Divisão
-    % -> Resto de uma divisão inteira
-    ++ -> Incremento
-    -- -> Decremento
-  */
-  ```
+do {
+  code...
+} while(condição);
+```
 
-  ### Comparação
+## Funções
 
-  Operadores que comparam de forma lógica valores dentro do programa.
+Funções são o cerne do JavaScript.
 
-  ```JS
-  /*
-    e -> &&
-    ou -> ||
-    não -> !
-    igualdade de valores -> == -> compara valores de objetos
-    igualdade de tipos -> === -> compara valores de objetos e de tipos
-  */
-  ```
+### Functions declarations
 
-  ## Condicionais
+Mais clássica, sofre hoisting. O hoisting se deve ao fato de que funções
+declaradas dessa forma são carregadas em memória pela engine do JS antes do
+programa todo ser executado, isso é feito pelo reconhecimento da palavra chave
+**function**.
 
-  Estruturamos nosso código com condicionais para termos certas execuções apenas
-  quando certa condição for verdadeira.
+```JS
+sayMyName();
 
-  ```JS
-  /*
-    if(condição) {
-      código 1
-    }else if(condição 2) {
-      código 2
-    }else {
-      código 3
-    }
+function sayMyName() {
+  console.log(`Heisenberg`);
+}
+```
 
-    obs: checar valores truthy e falsy
-  */
-  ```
+### Functions expressions
 
-  Podemos utilizar uma estrutura switch que checa se uma variável assume valores
-  específicos com switch case
+Guardar o nome de uma função dentro de uma variável. Em JS, funções são objetos,
+logo podem ser manipuladas como todos os outros, como guardadas em variáveis,
+chamadas ou até mesmo serem retornadas por outra função. Por meio de function
+declarations, as mesmas **não sofrem hoisting**.
 
-  ```JS
-  switch(variable) {
-    case valor_1:
-      // código
-      break;
-    case valor_2:
-      // código
-      break;
-    default:
-      // código de backup
-  }
-  ```
+````JS
+let sayMyName = function() {
+  console.log(`Heisenberg`);
+}
+````
 
-  ## Estruturas de repetição
+### Arrow functions
 
-  ```JS
-  while(condição) {
-    code...
-  }
+Implementadas no ES6, são formas de escrever as functions expressions de uma
+maneira mais simples, reduzindo o código e auxiliando no seu entendimento.
 
-  for(let i = 0; i < value; i++) {
-    code...
-  }
+**Não há necessidade da palavra-chave function**
 
-  do {
-    code...
-  } while(condição);
-  ```
+````JS
+let sayMyName = () => {
+  console.log(`Heisenberg`);
+}
+````
