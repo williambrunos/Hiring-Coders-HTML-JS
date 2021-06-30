@@ -173,11 +173,11 @@ logo podem ser manipuladas como todos os outros, como guardadas em variáveis,
 chamadas ou até mesmo serem retornadas por outra função. Por meio de function
 declarations, as mesmas **não sofrem hoisting**.
 
-````JS
+```JS
 let sayMyName = function() {
   console.log(`Heisenberg`);
 }
-````
+```
 
 ### Arrow functions
 
@@ -186,8 +186,106 @@ maneira mais simples, reduzindo o código e auxiliando no seu entendimento.
 
 **Não há necessidade da palavra-chave function**
 
-````JS
+```JS
 let sayMyName = () => {
   console.log(`Heisenberg`);
+}
+```
+
+## Classes
+
+Classe é o básico de POO, suportada por JS desde o ES6. A classe é um molde 
+para objetos, instâncias em memória HEAP cujo acesso é feito por um ponteiro.
+
+Podemos definir uma classe por meio da palavra-chave **class**, adicionando um
+método construtor próprio por meio de **constructor()**, passando os atributos
+(ou não) que serão armazenados nos atributos da classe.
+
+* Obs: **O operador this é usado para fazer referência a um atributo da classe**
+
+Em uma classe só é permitida a utilização de métodos. A manipulação de atributos
+é feita por meio destas. Na definição de um método novo(exceto o construtor), 
+utilizamos apenas o seu nome, sem o function.
+
+```JS
+class Book {
+  constructor(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+  }
+
+  read() {
+    return `Reading ${this.title}, from ${this.author} that has ${this.pages}`;
+  }
+}
+```
+
+
+## Herança
+
+Herança faz parte dos conceitos pilares de Orientação a Objetos. Consiste em,
+uma classe herdar os atributos e métodos de uma outra classe diferente, chamada
+de **superclasse**, podendo assim reutilizar código e ainda criar outros métodos
+dentro da **subclasse**. Facilitando a reutilização de código e manutenção do
+software.
+
+A herança em JS funciona quando utilizamos a palavra reservada **extends**.
+
+Além disso, em nosso método construtor, temos que chamar o método **super**, que
+invoca o método construtor da superclasse, instanciando seus atributos em nossa
+subclasse. Podemos ainda ter outros atributos próprios, desde que os declaremos em
+nosso construtor da subclasse e não os passemos como argumentos no método super(pois
+pertence apenas à subclasse em questão).
+
+````JS
+// A classe ITBooks estende, herda, os atributos e métodos da classe Book
+class ITBook extends Book {
+  constructor(title, author, pages, technology) {
+    super(title, author, pages);
+    this.technology = technology;
+  }
+}
+
+read() {
+  const propsNotDefined = this.title === undefined || 
+                            this.author === undefined ||
+                            this.pages === undefined ||
+                            this.technology === undefined;
+    
+    if(propsNotDefined) {
+      throw new Error("Book title, author, technology" +
+       + "or pages might have be undefined");
+    }else {
+      return `Reading ${this.title}, from ${this.author} that has ${this.pages} pages. Technology: ${this.technology}`;
+    }
+}
+````
+
+Podemos ainda reescrever métodos que estão presentes na superclasse. Neste caso, o
+método reescrito terá prioridade de execução do que aquele presente na superclasse.
+
+## Encapsulamento
+
+Com o encapsulamento, podemos proteger certos atributos da nossa classe. Fazemos
+isso colocando um "_" após sua inicialização no método construtor. Dessa forma,
+não temos acesso direto ao atributo, mas podemos fazê-lo por meio da função
+get -> retorna o valor no atributo desejado e o set -> atribui um valor ao atributo
+desejado.
+
+````JS
+class Person {
+  constructor(name) {
+    // Inicialização de um atributo name encapsulado
+    this._name = name;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(value) {
+    this._name = value;
+  }
 }
 ````
