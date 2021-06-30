@@ -15,8 +15,12 @@ let me = {
 me.sayHello();
 
 // Array e Chain of responsibility 
-const months = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
+const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
+ "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 console.log(`Quantidade de meses no ano ${months.length}`);
 const deleted = months.splice(2, 3);
 console.log(deleted);
 
+for(let i = 0; i < months.length; i++) {
+  console.log(`${months[i]}`);
+}

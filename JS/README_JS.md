@@ -130,3 +130,19 @@
       // código de backup
   }
   ```
+
+  ## Estruturas de repetição
+
+  ```JS
+  while(condição) {
+    code...
+  }
+
+  for(let i = 0; i < value; i++) {
+    code...
+  }
+
+  do {
+    code...
+  } while(condição);
+  ```
