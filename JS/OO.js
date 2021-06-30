@@ -4,13 +4,15 @@ class Book {
     this.author = author;
     this.pages = pages;
   }
+}
 
-  read() {
-    if(this.title === undefined || this.author === undefined || this.pages === undefined) {
-      throw new Error("Book title, author or pages might have be undefined");
-    }else {
-      return `Reading ${this.title}, from ${this.author} that has ${this.pages} pages`;
-    }
+// Adding read() function to Book prototype (chain of responsibility)
+
+Book.prototype.read = function() {
+  if(this.title === undefined || this.author === undefined || this.pages === undefined) {
+    throw new Error("Book title, author or pages might have be undefined");
+  }else {
+    return `Reading ${this.title}, from ${this.author} that has ${this.pages} pages`;
   }
 }
 
@@ -22,17 +24,23 @@ class ITBook extends Book {
   }
 
   read() {
-    const propsNotDefined = this.title === undefined || 
+    
+  }
+}
+
+// Adding read() function to ITBook prototype (chain of responsibility)
+
+ITBook.prototype.read = function() {
+  const propsNotDefined = this.title === undefined || 
                             this.author === undefined ||
                             this.pages === undefined ||
                             this.technology === undefined;
     
-    if(propsNotDefined) {
-      throw new Error("Book title, author, technology" +
-       + "or pages might have be undefined");
-    }else {
-      return `Reading ${this.title}, from ${this.author} that has ${this.pages} pages. Technology: ${this.technology}`;
-    }
+  if(propsNotDefined) {
+    throw new Error("Book title, author, technology" +
+      + "or pages might have be undefined");
+  }else {
+    return `Reading ${this.title}, from ${this.author} that has ${this.pages} pages.Technology: ${this.technology}`;
   }
 }
 
