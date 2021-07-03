@@ -192,6 +192,24 @@ let sayMyName = () => {
 }
 ```
 
+Arrow functions possuem um retorno implícito se digitarmos apenas uma expressão
+ao final de "=>", sem ter mesmo o return.
+
+````JS
+const sum = (num1, num2) => num1 + num2;
+
+console.log(sum(2, 3)); // 5
+````
+
+### Callback Functions
+
+Funções passadas como argumentos para outras funções. Esse tipo de função respeita
+a ordem de execução das outras, ou seja: não temos aquele comportamento de
+comportamento assíncrono, quando uma função é executada antes da outra que levará
+um tempo a ser executada, mesmo que declarada após a primeira.
+
+**IMPEDE COMPORTAMENTOS DE ASSINCRONISMO, MANTENDO A ORDEM DE EXECUÇÃO DAS FUNÇÕES**
+
 ## Classes
 
 Classe é o básico de POO, suportada por JS desde o ES6. A classe é um molde 
@@ -287,5 +305,41 @@ class Person {
   set name(value) {
     this._name = value;
   }
+}
+````
+
+## Template Strings(Literals)
+
+Forma de unir expressões JS com Strings, sem utilizar o '+'. É uma forma mais
+atual e prática de unir JS com strings, sem utilizar concatenação, mas sim
+interpolação. Dessa forma, nossas strings declaradas em JS permitem a utilização
+de expressões dentro delas.
+
+### Sem Interpolação -> Utiliza-se "" ou ''
+
+````JS
+const myName = "William";
+console.log("Hello, my name is " + myName);
+````
+
+### Com Interpolação -> Utiliza-se ``
+
+````JS
+const myName = "William";
+console.log(`Hello, my name is ${myName}`);
+````
+
+## Operador Ternário
+
+Este operador é uma alternativa a escrita de um if...else, sem else if!
+Testa apenas duas condições, se é verdadeira ou falsa.
+
+````JS
+// const boolean = (teste_lógico) ? Retorno_Verdadeiro: Retorno_Falso;
+
+function verifyMajority(age) {
+  const isMajor = age >= 18 ? "Is Major": "Isn't major";
+  
+  return isMajor;
 }
 ````
