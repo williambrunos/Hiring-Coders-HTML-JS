@@ -210,6 +210,18 @@ um tempo a ser executada, mesmo que declarada após a primeira.
 
 **IMPEDE COMPORTAMENTOS DE ASSINCRONISMO, MANTENDO A ORDEM DE EXECUÇÃO DAS FUNÇÕES**
 
+### Anonymous Functions
+
+Este tipo de funções são aquelas nas quais não possuem nome, não a armazenamos na
+call stack, apenas a executamos uma vez ou a cada vez que um evento ocorrer.
+
+````JS
+listForm.addEventListener("submit", (e) => {
+  // código...
+  // Função anônima
+})
+````
+
 ## Classes
 
 Classe é o básico de POO, suportada por JS desde o ES6. A classe é um molde 
@@ -343,3 +355,53 @@ function verifyMajority(age) {
   return isMajor;
 }
 ````
+
+## Arrays
+
+### Map
+
+O método map pertence à cadeia de protótipos dos arrays em js. Este método consiste
+em passar como argumento uma callback function, que será executada para cada
+elemento pertencente ao array(iterar) sem modificá-lo.
+
+````JS
+const gamaStudents = ["William", "Maria", "João", "Marcos"];
+gamaStudents.map((student) => {
+  console.log(student);
+});
+````
+
+### Filter
+
+O método filter irá criar um novo array baseado nos elementos anteriores de um array.
+O método aceita como argumento uma callback function tal que, se seu retorno for
+true, o elemento é adicionado ao novo array, se não ele não é adicionado.
+
+* Ex: Queremos guardar os valores ímpares de um array dentro de outro array.
+Filtrar elementos de um array <=> Método filter :)
+
+````JS
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+// Itera para cada number de numbers a condição e salva number em oddNumbers
+// se e somente se number % 2 != 0 (condição de ser ímpar)
+const oddNumbers = numbers.filter((number) => {
+  return number % 2 != 0;
+});
+````
+
+### Reduce 
+
+Um método de um array capaz de reduzir os elementos a uma expressão matemática.
+
+````JS
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+const soma = numbers.reduce((previous, next) => {
+  return previous + next;
+}, 2);
+````
+
+O método acima irá iterar para cada número previous do array numbers e irá somá-lo
+com o próximo número, 'next'. Ao final, a soma ainda será incrementada a um valor
+2(arbitrário) e será retornada à variável soma.
