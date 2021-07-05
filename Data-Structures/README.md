@@ -36,6 +36,16 @@ Algorítmos que buscam elementos em conjuntos de dados diversos.
 ### Busca Linear
 
 Algoritmo mais simples, consiste em buscar elemento a elemento dentro do array e
-retornar o índice no qual a chave se encontra, ou undefined caso contrário. Esse
-algoritmo exige que o array já esteja ordenado em ordem crescente ou decrescente,
-variando a lógica do algoritmo em cada ordem.
+retornar o índice no qual a chave se encontra, ou undefined caso contrário. 
+**Complexidade temporal O(n).**
+
+### Busca Binária 
+
+Esse algoritmo exige que o array já esteja ordenado em ordem crescente ou decrescente,
+variando a lógica do algoritmo em cada ordem. **Complexidade temporal O(log(n)).**
+
+## Hash Table
+
+Conjunto de valores(objetos) dados por conjuntos de "chave: valor", tais que
+chaves não se repitam. Fazemos um mapeamento da chave a uma posição dentro da
+tabela hash, com **complexidade temporal constante O(1);**
