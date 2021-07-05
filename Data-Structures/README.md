@@ -28,3 +28,12 @@ Primeiro a entrar é o primeiro a sair.
 
 Conjunto de dados dispostos de forma a "Não haver limite de elementos", mesmo sabendo
 que a capacidade de armazenamento de dados em um computador é finita.
+
+## Buscas
+
+Algorítmos que buscam elementos em conjuntos de dados diversos.
+
+### Busca Linear
+
+Algoritmo mais simples, consiste em buscar elemento a elemento dentro do array e
+retornar o índice no qual a chave se encontra, ou undefined caso contrário.
