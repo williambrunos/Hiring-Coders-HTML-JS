@@ -18,3 +18,13 @@ Método na qual insere um elemento no topo de uma pilha.
 ### Pop
 
 Método na qual retira um elemento do topo de uma pilha.
+
+## Fila - Queue
+
+A ordem de inserção e remoção na fila é dada por FIFO -> First In First Out ->
+Primeiro a entrar é o primeiro a sair.
+
+## Lista
+
+Conjunto de dados dispostos de forma a "Não haver limite de elementos", mesmo sabendo
+que a capacidade de armazenamento de dados em um computador é finita.
