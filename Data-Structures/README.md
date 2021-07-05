@@ -36,4 +36,6 @@ Algorítmos que buscam elementos em conjuntos de dados diversos.
 ### Busca Linear
 
 Algoritmo mais simples, consiste em buscar elemento a elemento dentro do array e
-retornar o índice no qual a chave se encontra, ou undefined caso contrário.
+retornar o índice no qual a chave se encontra, ou undefined caso contrário. Esse
+algoritmo exige que o array já esteja ordenado em ordem crescente ou decrescente,
+variando a lógica do algoritmo em cada ordem.
