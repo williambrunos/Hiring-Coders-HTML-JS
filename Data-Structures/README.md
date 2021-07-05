@@ -1,0 +1,20 @@
+# Oh, Hello There Again!
+
+Esta é a seção de estruturas de dados, ou seja: formas de armazenar, buscar e
+remover dados de uma forma efetiva dependendo do nosso contexto. Veremos pilhas,
+filas, listas e alguns algorítmos de ordenação também.
+
+Nas ED, teremos interfaces nas quais consumimos métodos e criamos nossas estruturas.
+
+## Pilha - Queue
+
+A lógica da construção de uma pilha é FILO -> First In Last Out -> Primeiro a entrar
+é o último a sair -> Regra de acesso aos elementos.
+
+### Push
+
+Método na qual insere um elemento no topo de uma pilha.
+
+### Pop
+
+Método na qual retira um elemento do topo de uma pilha.
