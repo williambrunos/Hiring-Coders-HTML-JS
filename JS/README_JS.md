@@ -405,3 +405,58 @@ const soma = numbers.reduce((previous, next) => {
 O método acima irá iterar para cada número previous do array numbers e irá somá-lo
 com o próximo número, 'next'. Ao final, a soma ainda será incrementada a um valor
 2(arbitrário) e será retornada à variável soma.
+
+## Objects Destructuring
+
+Maneiras de desconstruir, pegar atributos de objetos ou arrays.
+
+### Operador .
+
+Basta adicionar um . logo após o objeto.
+
+### ['property']
+
+````JS
+const obj = {
+  property: value,
+};
+
+console.log(obj['property']);
+````
+
+### Destructuring
+
+Podemos acessar atributos de um objeto apenas usando {} e os nomes de seus atributos.
+
+````JS
+const pessoa = {
+  name: "William",
+  age: 18,
+  city: "Sobral",
+};
+
+const { name, age, city } = pessoa;
+
+console.log(`Hi, my name is ${name}, i'm ${age} years old and from ${city}`);
+````
+
+Quando tratamos de arrays de objetos, o mais interessante é utilizarmos um método
+map para iterar sobre esses objetos e executar uma callback function.
+
+## Desenvolvimento Web atual
+
+### SPA - Single Page Applications
+
+Aplicações web de única página. Ou seja, todos os componentes da web são dispostos
+em uma única página web, de forma que a página não é recarregada toda vez que tenha
+uma atualização de dados, apenas a parte realmente necessária.
+**React, Angular, Vue**
+
+### PWA - Progressive Web App
+
+Aplicações híbridas para web, disponíveis para desktop e mobile, sem necessariamente
+instalar a aplicação.
+
+### Web Components
+
+Criação de componentes para web com html, css e js, códigos modularizados e reutilizáveis.
