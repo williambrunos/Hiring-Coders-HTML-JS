@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessibility</title>
-</head>
-<body>
-  <header role="banner">
-    <nav role="navigation" aria-level="main navigation">
-      <ul role="menu">
-        <li><a href="#" role="menuItem">Home</a></li>
-        <li><a href="#" role="menuItem">Quem somos</a></li>
-        <li><a href="#" role="menuItem">Contatos</a></li>
-        <li><a href="#" role="menuItem">Conteúdos</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
 
-  <main role="main" aria-level="page content">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea recusandae, veniam et ipsum reiciendis quis vero cumque? Quam ab, quod suscipit repudiandae veniam voluptas commodi impedit asperiores voluptates, rerum debitis!</p>
-  </main>
-</body>
+    <title>Accessibility</title>
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation" aria-level="main navigation">
+        <ul role="menu">
+          <li><a href="#" role="menuItem">Home</a></li>
+          <li><a href="#" role="menuItem">Quem somos</a></li>
+          <li><a href="#" role="menuItem">Contatos</a></li>
+          <li><a href="#" role="menuItem">Conteúdos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main" aria-level="page content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea recusandae,
+        veniam et ipsum reiciendis quis vero cumque? Quam ab, quod suscipit
+        repudiandae veniam voluptas commodi impedit asperiores voluptates, rerum
+        debitis!
+      </p>
+    </main>
+
+    <table
+      summary="Tabela com nome de empresas, quantidade de trabalhadores e ano
+  de criação das mesmas"
+    >
+      <caption>
+        Detalhes de empresas
+      </caption>
+      <thead>
+        <tr>
+          <th abbr="empresa" scope="col">Nome da Empresa</th>
+          <th abbr="trabalhadores" scope="col">Número de trabalhadores</th>
+          <th abbr="fundação" scope="col">Data de fundação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Apple inc.</th>
+          <td scope="">98.000</td>
+          <td scope="">1976</td>
+        </tr>
+        <tr>
+          <th scope="row">Google inc.</th>
+          <td scope="">50.000</td>
+          <td scope="">1997</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>

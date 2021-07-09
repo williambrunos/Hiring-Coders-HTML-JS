@@ -1,4 +1,19 @@
-header {
+nav {
+  background-color: black;
+  width: auto;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
   display: flex;
   flex-direction: row;
+}
+
+ul li {
+  margin: 0 2rem;
+}
+
+ul li a {
+  text-decoration: none;
 }
