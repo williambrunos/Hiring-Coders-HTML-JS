@@ -19,7 +19,97 @@
 
     <section class="presentation">
       <h2>Tags de títulos</h2>
-      <p>Possuem <span>significado</span> semântico, além de uma mera estilização!</p>
+      <p>
+        Possuem <span>significado</span> semântico, além de uma mera
+        estilização!
+      </p>
     </section>
+
+    <video
+      src="./life could be a dream.mp4"
+      controls
+      height="300"
+      width="300"
+      played
+      preload="metadata"
+      poster="./monkey.jpg"
+    ></video>
+
+    <h3>Lista desordenada - Unordered List</h3>
+    <ul>
+      <li>1 banana</li>
+      <li>2 banana</li>
+      <li>Other banana</li>
+    </ul>
+
+    <h3>Lista Ordenada - Ordered list</h3>
+
+    <ol start="3" type="A">
+      <li>Banana</li>
+      <li>Banana?</li>
+    </ol>
+
+    <table>
+      <caption>
+        Atividades VS Meses do Ano
+      </caption>
+
+      <thead>
+        <tr>
+          <th></th>
+          <th>Janeiro</th>
+          <th>Fevereiro</th>
+          <th>Março</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Feitas</td>
+          <td>Meditação</td>
+          <td>Programação</td>
+          <td>Estudos bíblicos</td>
+        </tr>
+        <tr>
+          <td>Não feitas</td>
+          <td>Caminhadas</td>
+          <td>Pedaladas</td>
+          <td>Exercícios físicos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--action diz respeito a url de destino do backend que trata os dados-->
+    <!--method diz respeito ao método HTTP de transferência de dados-->
+    <form action="#" method="POST">
+      <label for="campoNome">Nome</label>
+      <input type="text" name="nome" id="campoNome" />
+
+      <label for="campoEstudos">Interesses de estudo</label>
+      <select name="interesses" id="campoEstudos">
+        <option value="1">Vendas</option>
+        <option value="2">Marketing</option>
+      </select>
+
+      <fieldset>
+        <legend>Interesses de estudo</legend>
+        <label for="campoVendas">Vendas</label>
+        <input type="radio" name="interesse2" value="1" id="campoVendas" />
+
+        <label for="campoMarketing">Marketing</label>
+        <input type="radio" name="interesse2" value="2" id="campoMarketing" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Interesses de estudo</legend>
+        <label for="campoVendasCheck">Vendas</label>
+        <input type="checkbox" name="interesse3" value="1" id="campoVendasCheck"/>
+
+        <label for="campoMarketingCheck">Marketing</label>
+        <input type="checkbox" name="interesse3" value="2" id="campoMarketingCheck"/>
+      </fieldset>
+
+      <input type="submit" value="Enviar o formulário" />
+    </form>
   </body>
 </html>

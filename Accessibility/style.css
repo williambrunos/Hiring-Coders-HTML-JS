@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  width: 90%;
+}
+
+header p {
+  padding: .5rem;
+  color: #6332c6;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #6332c6;
+  font-weight: 700;
+}
+
+.Page-description h1 { 
+  font-weight: 700;
+  font-size: 32px;
+
+  margin: 3rem 4.5rem 1.8rem 0;
+}
+
+.Page-description p {
+  margin: 0 4.5rem 2rem 0;
+}
+
+.Services p {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.Services button {
+  background-color: #6332c6;
+  width: 100%;
+  padding: .8rem .8rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: .2rem 0;
+  color: whitesmoke;
+  border-radius: .9rem .9rem 0 .9rem;
+  text-align: left;
+
+  transition: 700ms;
+  opacity: 0.75;
+}
+
+.Services button:hover {
+  transition: 700ms;
+  opacity: 0.9;
+}
+
+.Services button img {
+  height: 1rem;
+  margin: 0 1rem 0 0;
+}
