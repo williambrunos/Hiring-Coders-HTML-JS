@@ -109,3 +109,60 @@ Remove o atributo passado como argumento do método.
 ````JS
 element.removeAttribute("id"); // remove o atributo id do elemento
 ````
+
+### Alterando Estilos
+
+Acessamos o atributo style de cada elemento e acessamos a propriedade que quisermos,
+colocando um valor a esta.
+
+Podemos ainda acessar a lista de classes de um elemento, adicionando ou removendo-as.
+O método toggle busca o estado de uma classe: se ela existe, ele remove. Se ela não
+existe, ele cria -> toggle -> switch -> on/off
+
+### Navegando pelos elementos
+
+#### Pelos elementos pais
+
+Atributo parentNode ou parentElement de algum elemento html.
+
+#### Pelos elementos filhos
+
+Atributo childNodes -> Retorna um NodeList com os elementos html filhos do elemento
+em questão -> Leva textos e espaços vazios do documento html.
+
+Atributo children -> Retorna um htmlCollection -> Sem textos e espaços vazios.
+
+Atributos first/last Child -> Retorna o primeiro/último elemento html contando com
+textos e espaços vazios.
+
+Atributos first/last ElementChild -> Retorna o primeiro/último elemento html sem
+contar com textos e espaços vazios.
+
+#### Pelos elementos irmãos
+
+Atributo first/last Sibling -> Retorna o primeiro ou último irmão do
+elemento em questão -> leva em conta textos e espaços em branco.
+
+Atributo first/last ElementSibling -> Retorna o primeiro ou último elemento irmão
+do elemento em questão -> exclui textos e espaços em branco.
+
+### Criando elementos
+
+````JS
+const element = document.createElement("ElementName"); // "div" por exemplo
+````
+
+Adicionando no final do documento html -> método append -> do body
+Adicionando ao final do documento html -> método preappend
+
+Adicionando antes de um elemento específico:
+
+````JS
+parentElement.insertBefore("elementToAdd", "beforeWichElement?");
+````
+
+Adicionando depois de um elemento específico (target) :
+
+````JS
+parentElement.insertBefore("elementToAdd", "targetElement.nextElementSibling");
+````

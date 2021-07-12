@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testing DOM</title>
-</head>
-<body>
-  <h1>Oh Hello There!</h1>
-  <div id="description"></div>
-  <button onClick="changeColor()">CLick me to change title color!</button>
-  <br>
-  <button onCLick="addDescription()">Click me to see the description!</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing DOM</title>
+  </head>
+  <body>
+    <h1>Oh Hello There!</h1>
+    <div id="description"></div>
+    <button onClick="changeColor()" id="title">
+      CLick me to change title color!
+    </button>
+    <br />
+    <button onCLick="addDescription()" id="description">
+      Click me to see the description!
+    </button>
+    <br />
+    <button onClick="addH2()" id="header-2">
+      Click me to create a header 2 before this button!
+    </button>
+    <br />
+    <button onClick="addH2After()" id="header-2-after">
+      Click me to create header 2 after this button!
+    </button>
 
-  <br>
-  <input type="text" placeholder="digite algo">
-  
-  <script src="./script.js"></script>
-</body>
+    <br />
+    <input type="text" placeholder="digite algo" />
+
+    <script src="./script.js"></script>
+  </body>
 </html>
