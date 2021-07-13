@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+#open-modal {
+  width: 8.2rem;
+  height: 3.2rem;
+
+  color: white;
+  background-color: #b181d6;
+
+  border: none;
+}
+
+#modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+#modal button {
+  width: 9.2rem;
+  height: 4.2rem;
+}

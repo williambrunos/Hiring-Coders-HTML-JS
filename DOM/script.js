@@ -1,4 +1,10 @@
 let cont = 0;
+const h1 = document.querySelector("h1");
+
+h1.addEventListener('click', () => {
+  alert("ops...don't click on that!");
+});
+
 const el = document.querySelector("body");
 console.log(el.parentNode);
 function changeColor() {
