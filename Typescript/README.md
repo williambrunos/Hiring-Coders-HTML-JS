@@ -28,3 +28,30 @@ npm install -g typescript
 ````
 
 https://www.typescriptlang.org/
+
+## Motivação
+
+Imagine declarar uma função que deveria obedecer uma certa execução, mas por
+conta de passagens de argumentos de tipos errados temos o resultado "quebrado":
+
+````JS
+function somar(numero1, numero2) {
+  return numero1 + numero2;
+}
+
+console.log(somar({nome: "William", idade: 18}, "50"));
+````
+
+## Configuração
+
+````
+tsc --init
+````
+
+Problemas com políticas de execução no windows?
+https://www.youtube.com/watch?v=J30n3lMyvbY
+
+No diretório do arquivo ts, digite tsc para transpilar ts em js
+````
+tsc
+````
