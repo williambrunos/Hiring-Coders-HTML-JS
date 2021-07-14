@@ -52,6 +52,11 @@ Problemas com políticas de execução no windows?
 https://www.youtube.com/watch?v=J30n3lMyvbY
 
 No diretório do arquivo ts, digite tsc para transpilar ts em js
+
 ````
 tsc
 ````
+
+É importante criar uma pasta dist ou build que irá armazenar o código js depois
+da build com tsc, para isso, use o atributo "outdir" no tsconfig e coloque seu
+valor para "./dist" ou "./build".
