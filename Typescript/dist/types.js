@@ -41,3 +41,16 @@ function mostraFuncionarios(funcionarios) {
     funcionarios.map(funcionario => console.log(funcionario.nome));
 }
 mostraFuncionarios(array);
+// Type Assertion -> (variable as type) -> Casting
+let idade = 19;
+// idade.toString() -> Não reconhecido
+let idadeString = idade.toString();
+/*
+  Erro, pois HTMLElement não possui atributo value
+
+  const input = document.querySelector("input");
+  console.log(input.value);
+*/
+// Sem erros mais :)
+const input = document.querySelector("input");
+console.log(input.value);

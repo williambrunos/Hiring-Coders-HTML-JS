@@ -60,3 +60,8 @@ tsc
 É importante criar uma pasta dist ou build que irá armazenar o código js depois
 da build com tsc, para isso, use o atributo "outdir" no tsconfig e coloque seu
 valor para "./dist" ou "./build".
+
+## Interfaces 
+
+Definição de um tipo próprio do desenvolvedor, mais aconselhado do que a utilização
+de type alias.
