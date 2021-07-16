@@ -30,3 +30,9 @@ const familia = [
 for(let pessoa in familia) {
   console.log(familia[pessoa]);
 }
+
+// For of -> Retorna não o índice, mas cada elemento do array
+
+for(let coisa of bolsaVanessa) {
+  console.log(coisa);
+}
